@@ -14,7 +14,7 @@ export class Random implements INodeType {
     group: ['transform'],
     version: 1,
     subtitle: '={{$parameter["operation"]}}',
-    description: 'Generate true random numbers using Random.org API',
+    description: 'Generate random numbers using Random.org API',
     defaults: {
       name: 'Random',
     },
@@ -38,7 +38,7 @@ export class Random implements INodeType {
         default: 'generateRandomNumber',
       },
       {
-        displayName: 'Minimum Value',
+        displayName: 'Min Value',
         name: 'min',
         type: 'number',
         displayOptions: {
@@ -47,11 +47,11 @@ export class Random implements INodeType {
           },
         },
         default: 1,
-        description: 'The minimum value for the random number (inclusive)',
+        description: 'The min value for the random number',
         required: true,
       },
       {
-        displayName: 'Maximum Value',
+        displayName: 'Max Value',
         name: 'max',
         type: 'number',
         displayOptions: {
@@ -60,7 +60,7 @@ export class Random implements INodeType {
           },
         },
         default: 100,
-        description: 'The maximum value for the random number (inclusive)',
+        description: 'The max value for the random number',
         required: true,
       },
     ],
@@ -91,7 +91,6 @@ export class Random implements INodeType {
         }
 
         try {
-          // Call Random.org API
           const randomOrgUrl = `https://www.random.org/integers/?num=1&min=${min}&max=${max}&col=1&base=10&format=plain&rnd=new`;
 
           const response = await this.helpers.request({
@@ -129,7 +128,6 @@ export class Random implements INodeType {
             throw error;
           }
 
-          // Type guard para error
           const errorMessage = error instanceof Error ? error.message : String(error);
 
           throw new NodeApiError(this.getNode(), {
