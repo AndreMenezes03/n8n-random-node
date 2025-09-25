@@ -1,9 +1,16 @@
 # n8n Random Node
 
+<<<<<<< HEAD
 Um node personalizado para n8n que gera números aleatórios verdadeiros usando a API do Random.org.
 Feito para o desafio técnico do processo seletivo Recruta [OnFly](https://www.onfly.com.br/).
 
 ## Pré-requisitos
+=======
+# n8n Random Node
+
+Um node personalizado para n8n que gera **números aleatórios verdadeiros** usando a API do Random.org.
+Feito para o desafio técnico do processo seletivo Recruta [OnFly](https://www.onfly.com.br/).
+>>>>>>> da75b097e349ee0c2478d849f549f4dae7ce641a
 
 Antes de começar, você precisa ter instalado:
 
@@ -169,4 +176,7 @@ curl "https://www.random.org/integers/?num=1&min=1&max=10&col=1&base=10&format=p
 ## Licença
 
 Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
+<<<<<<< HEAD
 
+=======
+>>>>>>> da75b097e349ee0c2478d849f549f4dae7ce641a
