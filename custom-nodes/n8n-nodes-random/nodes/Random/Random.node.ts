@@ -29,10 +29,10 @@ export class Random implements INodeType {
         noDataExpression: true,
         options: [
           {
-            name: 'True Random Number Generator',
+            name: 'Random Number Generator',
             value: 'generateRandomNumber',
-            description: 'Generate a true random number using Random.org',
-            action: 'Generate a true random number',
+            description: 'Generate a random number using Random.org',
+            action: 'Generate a random number',
           },
         ],
         default: 'generateRandomNumber',
@@ -76,18 +76,17 @@ export class Random implements INodeType {
         const min = this.getNodeParameter('min', i) as number;
         const max = this.getNodeParameter('max', i) as number;
 
-        // Validate input parameters
         if (min > max) {
           throw new NodeApiError(this.getNode(), {
-            message: 'Minimum value cannot be greater than maximum value',
-            description: 'Please ensure that the minimum value is less than or equal to the maximum value',
+            message: 'Min value cant be greater than max value',
+            description: 'Please keep the min value is less than or equal to the max value',
           });
         }
 
         if (!Number.isInteger(min) || !Number.isInteger(max)) {
           throw new NodeApiError(this.getNode(), {
-            message: 'Min and Max values must be integers',
-            description: 'Please provide integer values for both minimum and maximum parameters',
+            message: 'Min and max values must be integers',
+            description: 'Please provide integer values for both min and max parameters',
           });
         }
 

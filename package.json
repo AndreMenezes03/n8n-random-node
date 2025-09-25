@@ -1,0 +1,27 @@
+{
+  "name": "n8n-random-node-project",
+  "version": "1.0.0",
+  "description": "Custom n8n node for generating true random numbers using Random.org API",
+  "keywords": ["n8n", "custom-node", "random", "random-org", "automation"],
+  "license": "MIT",
+  "author": {
+    "name": "Andre Menezes Resende",
+    "email": "andremenezesresende@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreMenezes03/n8n-random-node.git"
+  },
+  "scripts": {
+    "dev": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "restart": "docker-compose restart",
+    "build": "cd custom-nodes/n8n-nodes-random && npm run build",
+    "install-deps": "cd custom-nodes/n8n-nodes-random && npm install",
+    "logs": "docker-compose logs -f n8n",
+    "setup": "npm run install-deps && npm run build && npm run dev"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
