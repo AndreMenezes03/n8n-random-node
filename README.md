@@ -1,13 +1,7 @@
-<details><summary>Thinking</summary>
-
-O usuário quer que eu reescreva o README removendo os emojis e tornando-o mais humano/natural. Vou manter a estrutura e informações importantes, mas com um tom mais direto e menos "decorativo".
-
-</details>
-
 # n8n Random Node
 
 Um node personalizado para n8n que gera números aleatórios verdadeiros usando a API do Random.org.
-
+Feito para o desafio técnico do processo seletivo Recruta [OnFly](https://www.onfly.com.br/).
 
 ## Pré-requisitos
 
