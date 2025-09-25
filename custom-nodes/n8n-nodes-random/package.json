@@ -1,0 +1,24 @@
+{
+  "name": "n8n-nodes-random",
+  "version": "1.0.0",
+  "description": "Custom node for generating true random numbers using Random.org API",
+  "keywords": ["n8n-community-node-package"],
+  "license": "MIT",
+  "main": "dist/nodes/Random/Random.node.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "nodes": [
+      "dist/nodes/Random/Random.node.js"
+    ]
+  },
+  "devDependencies": {
+    "typescript": "~4.8.4"
+  },
+  "dependencies": {
+    "n8n-workflow": "*"
+  }
+}
